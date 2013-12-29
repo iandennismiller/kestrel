@@ -1,0 +1,25 @@
+[retriever]
+type = SimplePOP3SSLRetriever
+server = {{ server }}
+username = {{ username }}
+password = {{ password }}
+
+[destination]
+type = MDA_external
+path = /usr/lib/dovecot/deliver
+arguments = ("-e",)
+
+[filter-1]
+type = Filter_external
+path = /usr/bin/spamc
+
+[filter-2]
+type = Filter_external
+path = /usr/bin/formail
+arguments = ("-a","X-Kestrel-Sieve: yes")
+exitcodes_drop = ()
+
+[options]
+delete = true
+verbose = 2
+message_log = ~/getmail.log

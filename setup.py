@@ -6,7 +6,6 @@ version = '0.1'
 setup(version=version,
       name='kestrel',
       description = "kestrel",
-      #packages = ["TopColors"],
       scripts = [
             "bin/kestrel_crontab.sh",
             "bin/kestrel_newconf.py",
@@ -20,8 +19,9 @@ setup(version=version,
       author_email='ian@iandennismiller.com',
       url='http://www.iandennismiller.com',
       install_requires = [
+            "sievelib==0.8",
             "Jinja2==2.7.1",
       ],
-      license='Proprietary',
+      license='MIT',
       zip_safe=False,
 )

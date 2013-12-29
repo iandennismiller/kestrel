@@ -1,15 +1,15 @@
-# turkr (c) 2013 Ian Dennis Miller
+# kestrel (c) 2013 Ian Dennis Miller
 
 SHELL=/bin/bash
 
 install:
 	python setup.py install
-	kestrel_crontab.sh
+	crontab etc/crontab.txt
 
 clean:
 	rm -rf build dist *.egg-info *.pyc
 
 depend:
-	mkvirtualenv kestrel
+	source /usr/local/bin/virtualenvwrapper.sh && mkvirtualenv kestrel
 
 .PHONY: clean install depend

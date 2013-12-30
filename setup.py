@@ -7,9 +7,11 @@ setup(version=version,
       name='kestrel',
       description = "kestrel",
       scripts = [
-            "bin/kestrel_crontab.sh",
+            "bin/kestrel_import_mailapp.py",
+            "bin/kestrel_init.py",
             "bin/kestrel_newconf.py",
-            "bin/kestrel_sieve.py",
+            "bin/kestrel_runcron.py",
+            "bin/kestrel_update.py",
       ],
       long_description="""kestrel""",
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers

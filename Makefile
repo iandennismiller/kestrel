@@ -11,6 +11,6 @@ clean:
 	rm -rf build dist *.egg-info *.pyc
 
 depend:
-	source /usr/local/bin/virtualenvwrapper.sh && mkvirtualenv kestrel
+	mkvirtualenv kestrel
 
 .PHONY: clean install depend

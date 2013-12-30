@@ -8,7 +8,4 @@ install:
 clean:
 	rm -rf build dist *.egg-info *.pyc
 
-depend:
-	mkvirtualenv kestrel
-
-.PHONY: clean install depend
+.PHONY: clean install

@@ -37,8 +37,7 @@ Installation
     apt-get install getmail4 procmail spamassassin virtualenvwrapper
     git clone git@github.com:iandennismiller/kestrel
     cd kestrel
-    make depend
-    workon kestrel
+    mkvirtualenv kestrel
     make install
 
 Credits

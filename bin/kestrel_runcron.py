@@ -6,5 +6,6 @@ import sys, os, platform, glob
 base_path = sys.argv[1]
 files = glob.glob(os.path.join(base_path, "*.conf"))
 
-getmail_cmd = "/usr/bin/getmail --quiet --rcfile %s" % " --rcfile ".join(files)
-os.system(getmail_cmd)
+if files:
+    getmail_cmd = "/usr/bin/getmail --quiet --rcfile %s" % " --rcfile ".join(files)
+    os.system(getmail_cmd)

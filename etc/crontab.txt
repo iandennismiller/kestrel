@@ -1,20 +1,20 @@
 # runs every minute
-* * * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0001.d >> $HOME/getmail.log
+* * * * * /usr/bin/setlock -n /tmp/0001.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0001.d >> $HOME/getmail.log
 
 # runs every 5 minutes
-*/5 * * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0005.d >> $HOME/getmail.log
+*/5 * * * * /usr/bin/setlock -n /tmp/0005.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0005.d >> $HOME/getmail.log
 
 # runs every 15 minutes
-*/15 * * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0015.d >> $HOME/getmail.log
+*/15 * * * * /usr/bin/setlock -n /tmp/0015.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0015.d >> $HOME/getmail.log
 
 # runs once per hour
-0 * * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0100.d >> $HOME/getmail.log
+0 * * * * /usr/bin/setlock -n /tmp/0100.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0100.d >> $HOME/getmail.log
 
 # runs once every 3 hours
-0 */3 * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0300.d >> $HOME/getmail.log
+0 */3 * * * /usr/bin/setlock -n /tmp/0300.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0300.d >> $HOME/getmail.log
 
 # runs once every 6 hours
-0 */6 * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0600.d >> $HOME/getmail.log
+0 */6 * * * /usr/bin/setlock -n /tmp/0600.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/0600.d >> $HOME/getmail.log
 
 # runs once per day at 1:00AM
-0 1 * * * $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/2400.d >> $HOME/getmail.log
+0 1 * * * /usr/bin/setlock -n /tmp/2400.lock $HOME/.virtualenvs/kestrel/bin/kestrel_runcron.py $HOME/.getmail/2400.d >> $HOME/getmail.log

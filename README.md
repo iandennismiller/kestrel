@@ -34,7 +34,7 @@ Now that everything is configured, we update getmail with our settings and wait 
 Installation
 ============
 
-    apt-get install getmail4 procmail spamassassin virtualenvwrapper
+    apt-get install getmail4 procmail spamassassin virtualenvwrapper daemontools
     git clone git@github.com:iandennismiller/kestrel
     cd kestrel
     mkvirtualenv kestrel

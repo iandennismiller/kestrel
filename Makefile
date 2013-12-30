@@ -1,7 +1,5 @@
 # kestrel (c) 2013 Ian Dennis Miller
 
-SHELL=/bin/bash
-
 install:
 	python setup.py install
 	crontab etc/crontab.txt

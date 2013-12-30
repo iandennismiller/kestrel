@@ -15,6 +15,9 @@ setup(version=version,
       ],
       long_description="""kestrel""",
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      data_files=[
+            ('etc', ['etc/getmail_rc.jinja2']),
+      ],
       include_package_data = True,
       keywords='',
       author='Ian Dennis Miller',

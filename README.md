@@ -30,6 +30,7 @@ Next, let's create some mail sorting rules.
 Now that everything is configured, we update getmail with our settings and wait for cron to call getmail.
 
     kestrel_update.py
+    ln -s ~/sieve/default.sieve ~/.dovecot.sieve
 
 Installation
 ============

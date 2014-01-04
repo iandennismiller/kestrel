@@ -3,6 +3,11 @@ kestrel
 
 Collect email from POP/IMAP servers and apply sorting rules; a simple framework for getmail4 and procmail/sieve.
 
+Developer's Note
+====
+
+This is alpha-release software.  I've been using this general scheme for over a year, but the software presented here is in-progress and may not fully conform to the documentation yet.
+
 Usage
 =====
 
@@ -45,3 +50,8 @@ Credits
 =======
 
 [OS_X_Mail_app_rules_to_sieve_filters](http://mechanicalcat.net/richard/log/Python/OS_X_Mail_app_rules_to_sieve_filters)
+
+License
+=======
+
+MIT

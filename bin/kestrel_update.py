@@ -38,13 +38,14 @@ def copy_getmail(base_path):
             )
 
 def copy_sieve(base_path):
-    sieve_path = os.path.expanduser("~/sieve")
+    sieve_path = os.path.expanduser("~/sieve/default.sieve")
+    os.system("cat sieve/??-*.sieve > /tmp/default.sieve")
 
     p = Parser()
-    with(open("sieve/default.sieve")) as f:
+    with(open("/tmp/default.sieve")) as f:
         if p.parse(f.read()):
             print "parse OK"
-            shutil.copy2("sieve/default.sieve", sieve_path)
+            shutil.copy2("/tmp/default.sieve", sieve_path)
         else:
             print "parser error"
             print p.error
